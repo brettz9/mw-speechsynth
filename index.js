@@ -222,6 +222,8 @@ container.appendChild(controls);
 
 
 document.getElementById('ws-data').style.speak = 'normal'; // Being set to none for some reason; interfering apparently
+var sliderContainer = document.createElement('div');
+
 var getContent = function () {
     var mct = document.getElementById('mw-content-text').cloneNode(true);
     [].slice.call(mct.querySelectorAll('#ws-data,#headertemplate,.opage,.parNum')).forEach(function (el) { // Ignore header template-added elements and page/par. numbers
@@ -331,7 +333,6 @@ var speak = function (txt) {
     });
 };
 
-var sliderContainer = document.createElement('div');
 sliderContainer.style.float = 'right';
 sliderContainer.style.marginTop = '-25px';
 
