@@ -154,7 +154,7 @@ container.appendChild(voicesLabel);
 voices.forEach(function(voice, i) { // voiceURI, name, lang, localService, default
     var option = document.createElement('option');
     option.value = i;
-    if (i === 1) {
+    if (voice.name && ['Daniel', 'Google UK English Male'].indexOf(voice.name) > -1) { // Our preferred default voices for Safari, Chrome, respectively
         option.selected = 'selected';
     }
     option.dataset.lang = voice.lang || 'en-US';
